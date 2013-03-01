@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*The Cube */
+
+ #experiment {
+      -webkit-perspective: 800;
+      -webkit-perspective-origin: 50% 200px;
+    }
+	
+	 #cube {
+      position: relative;
+      margin: 0 auto;
+      height: 200px;
+      width: 200px;
+      -webkit-transition: -webkit-transform 2s linear;
+      -webkit-transform-style: preserve-3d;
+    }
+	
+	   .face {
+      position: absolute;
+      height: 180px;
+      width: 180px;
+      padding: 10px;
+      background-color: rgba(50, 50, 50, 0.7);
+    }
+	
+	#cube .one  {
+      -webkit-transform: rotateX(90deg) translateZ(100px);
+    }
+
+    #cube .two {
+      -webkit-transform: translateZ(100px);
+    }
+
+    #cube .three {
+      -webkit-transform: rotateY(90deg) translateZ(100px);
+    }
+
+    #cube .four {
+      -webkit-transform: rotateY(180deg) translateZ(100px);
+    }
+
+    #cube .five {
+      -webkit-transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    #cube .six {
+      -webkit-transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+    }
+
+/*JQUERY OVERRIDES*/
+
+.ui-dialog.cubeDialog .ui-dialog-contain { margin-top: 5%; }
