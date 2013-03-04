@@ -31,11 +31,10 @@
         }, false);
 */
 				
-			//Swipe Coding for Mobile Device.
-			//Thanks to dmi3y (rhythmcode.com) @ StackOverflow (http://stackoverflow.com/questions/13726196/how-to-swipe-between-several-div-in-one-single-jquery-mobile-pages)
-			//for insperation. Adapted later to include jGesture library support.
-				$( document ).bind('swipeup swipedown swipeleft swiperight', function (ev) {
+			//Swipe Coding for Mobile Device. (Uses jGestures and jVertical plugins)
+				$( document ).bind('swipe swipeup swipedown swipeleft swiperight', function (ev, d) {
    switch (ev.type) {
+   
         case 'swiperight': // swipe right
             console.log('swipe right');
 			yAngle += 90;

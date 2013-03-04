@@ -22,7 +22,7 @@
       height: 180px;
       width: 180px;
       padding: 10px;
-      background-color: rgba(50, 50, 50, 0.7);
+      background-color: rgba(50, 50, 50, 0.5);
     }
 	
 	#cube .one  {
@@ -51,4 +51,4 @@
 
 /*JQUERY OVERRIDES*/
 
-.ui-dialog.cubeDialog .ui-dialog-contain { margin-top: 5%; }
+.ui-dialog.cubeDialog .ui-dialog-contain { margin-top: 5%;}
