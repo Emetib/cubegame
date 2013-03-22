@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*The Game */
+
+div.face>div {width: 53px; height: 53px; border: 6px outset; -webkit-transition: border 1s;}
+
+#F1 {position: absolute; top:2px; left: 2px;}
+#F2 {position: absolute; top:2px; left: 67px;}
+#F3 {position: absolute; top:2px; left: 132px;}
+
+#F4 {position: absolute; top:67px; left: 2px;}
+#F5 {position: absolute; top:67px; left: 67px;}
+#F6 {position: absolute; top:67px; left: 132px;}
+
+#F7 {position: absolute; top:132px; left: 2px;}
+#F8 {position: absolute; top:132px; left: 67px;}
+#F9 {position: absolute; top:132px; left: 132px;}
+
+
+#L1 {position: absolute; top:2px; left: 2px;}
+#L2 {position: absolute; top:2px; left: 67px;}
+#L3 {position: absolute; top:2px; left: 132px;}
+
+#L4 {position: absolute; top:67px; left: 2px;}
+#L5 {position: absolute; top:67px; left: 67px;}
+#L6 {position: absolute; top:67px; left: 132px;}
+
+#L7 {position: absolute; top:132px; left: 2px;}
+#L8 {position: absolute; top:132px; left: 67px;}
+#L9 {position: absolute; top:132px; left: 132px;}
+
+
+#B1 {position: absolute; top:2px; left: 2px;}
+#B2 {position: absolute; top:2px; left: 67px;}
+#B3 {position: absolute; top:2px; left: 132px;}
+
+#B4 {position: absolute; top:67px; left: 2px;}
+#B5 {position: absolute; top:67px; left: 67px;}
+#B6 {position: absolute; top:67px; left: 132px;}
+
+#B7 {position: absolute; top:132px; left: 2px;}
+#B8 {position: absolute; top:132px; left: 67px;}
+#B9 {position: absolute; top:132px; left: 132px;}
+
+
+#R1 {position: absolute; top:2px; left: 2px;}
+#R2 {position: absolute; top:2px; left: 67px;}
+#R3 {position: absolute; top:2px; left: 132px;}
+
+#R4 {position: absolute; top:67px; left: 2px;}
+#R5 {position: absolute; top:67px; left: 67px;}
+#R6 {position: absolute; top:67px; left: 132px;}
+
+#R7 {position: absolute; top:132px; left: 2px;}
+#R8 {position: absolute; top:132px; left: 67px;}
+#R9 {position: absolute; top:132px; left: 132px;}
+
+
+#T1 {position: absolute; top:2px; left: 2px;}
+#T2 {position: absolute; top:2px; left: 67px;}
+#T3 {position: absolute; top:2px; left: 132px;}
+
+#T4 {position: absolute; top:67px; left: 2px;}
+#T5 {position: absolute; top:67px; left: 67px;}
+#T6 {position: absolute; top:67px; left: 132px;}
+
+#T7 {position: absolute; top:132px; left: 2px;}
+#T8 {position: absolute; top:132px; left: 67px;}
+#T9 {position: absolute; top:132px; left: 132px;}
+
+
+#U1 {position: absolute; top:2px; left: 2px;}
+#U2 {position: absolute; top:2px; left: 67px;}
+#U3 {position: absolute; top:2px; left: 132px;}
+
+#U4 {position: absolute; top:67px; left: 2px;}
+#U5 {position: absolute; top:67px; left: 67px;}
+#U6 {position: absolute; top:67px; left: 132px;}
+
+#U7 {position: absolute; top:132px; left: 2px;}
+#U8 {position: absolute; top:132px; left: 67px;}
+#U9 {position: absolute; top:132px; left: 132px;}
+
+/*The Info*/
+
+#info {position: relative; width: 100%;}
+
+#info div {position: relative; display: inline;  width: 100px;}
+
+#score {left: 30px; width: 60px;}
+
+#timeTitle {left: 70px;}
+
+#countdown {left: 90px;}

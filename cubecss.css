@@ -13,7 +13,7 @@
       margin: 0 auto;
       height: 200px;
       width: 200px;
-      -webkit-transition: -webkit-transform 2s linear;
+      -webkit-transition: -webkit-transform 0.25s linear;
       -webkit-transform-style: preserve-3d;
     }
 	
@@ -23,7 +23,10 @@
       width: 180px;
       padding: 10px;
       background-color: rgba(50, 50, 50, 0.5);
+	  border: 1px solid white;
     }
+	
+	.face div { -webkit-transition: border 1s;}
 	
 	#cube .one  {
       -webkit-transform: rotateX(90deg) translateZ(100px);
@@ -38,7 +41,7 @@
     }
 
     #cube .four {
-      -webkit-transform: rotateY(180deg) translateZ(100px);
+      -webkit-transform: rotateY(180deg) translateZ(100px) rotate(180deg) ;
     }
 
     #cube .five {
@@ -46,9 +49,11 @@
     }
 
     #cube .six {
-      -webkit-transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+      -webkit-transform: rotateX(-90deg) translateZ(100px);
     }
 
 /*JQUERY OVERRIDES*/
 
 .ui-dialog.cubeDialog .ui-dialog-contain { margin-top: 5%;}
+
+.ui-dialog  .ui-header .ui-btn-icon-notext	{ display:none;}
