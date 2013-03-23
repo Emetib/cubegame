@@ -1,16 +1,21 @@
 // JavaScript Document defines game behaviour.
 //The Game
 
-$(function ()
+$(function () //document.ready function shorthand
 {
+	$('#closeInstructionDialog').bind('tap', function () //on exit button click
+	{ 
+		$('.ui-dialog').dialog('close'); //closes instruction dialog
+	});		
+		
 	$('#startGame').bind('tap', function () // when game window opened
 	{
 
 //STEP ONE: TIMER
 
-		var score = 0;
-		$("#score").text(score);
-		var seconds = 60;
+		var score = 0; //Define score variable
+		$("#score").text(score); //show on screen
+		var seconds = 60; // define game time
 		setTimeout(updateCountdown, 1000); //run function after a second
 
 		function updateCountdown()
@@ -55,8 +60,7 @@ $(function ()
 
 		function matchTiles(child)
 		{
-
-			var mColour = child.css('background-color');
+			var mColour = child.css('background-color'); // get colour to match
 			var mTiles = [child]; //create tile checking array and add user selected item
 			var count = 0; //keep count of matched tiles
 			count = 0; // reset count on each tile press
@@ -67,7 +71,6 @@ $(function ()
 				{ 
 					case 'F1':
 						//case Front Top Left
-
 						var match1 = $(document.getElementById("L3"));
 						var match2 = $(document.getElementById("F2")); // define four tiles in contact with
 						var match3 = $(document.getElementById("T7")); // array object
@@ -93,12 +96,10 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)'); // remove checked tile colour
 						mTiles.splice(0, 1); //remove checked tile from array
 						count++; //add one to tile count
-
 						break; //exit switch, restart from while loop.
 
 					case 'F2':
 						//all cases same, skip to line ~1700.
-
 						var match1 = $(document.getElementById("F1"));
 						var match2 = $(document.getElementById("F3"));
 						var match3 = $(document.getElementById("T8"));
@@ -124,7 +125,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'F3':
@@ -154,7 +154,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'F4':
@@ -184,7 +183,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'F5':
@@ -244,7 +242,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'F7':
@@ -274,7 +271,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'F8':
@@ -304,7 +300,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'F9':
@@ -334,7 +329,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L1':
@@ -364,7 +358,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L2':
@@ -394,7 +387,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L3':
@@ -424,7 +416,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L4':
@@ -454,7 +445,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L5':
@@ -484,7 +474,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L6':
@@ -514,7 +503,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L7':
@@ -544,7 +532,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L8':
@@ -574,7 +561,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'L9':
@@ -604,8 +590,8 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
+						
 					case 'R1':
 
 						var match1 = $(document.getElementById("F3"));
@@ -633,7 +619,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'R2':
@@ -663,7 +648,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'R3':
@@ -693,7 +677,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'R4':
@@ -723,7 +706,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'R5':
@@ -753,7 +735,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'R6':
@@ -783,7 +764,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'R7':
@@ -813,7 +793,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'R8':
@@ -843,7 +822,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'R9':
@@ -873,8 +851,8 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
+						
 					case 'T1':
 
 						var match1 = $(document.getElementById("L1"));
@@ -902,7 +880,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'T2':
@@ -932,7 +909,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'T3':
@@ -962,7 +938,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'T4':
@@ -992,7 +967,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'T5':
@@ -1022,7 +996,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'T6':
@@ -1052,7 +1025,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'T7':
@@ -1082,7 +1054,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'T8':
@@ -1112,7 +1083,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'T9':
@@ -1142,7 +1112,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'B1':
@@ -1172,7 +1141,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'B2':
@@ -1202,7 +1170,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'B3':
@@ -1232,7 +1199,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'B4':
@@ -1262,7 +1228,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'B5':
@@ -1291,8 +1256,7 @@ $(function ()
 
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
-						count++;
-
+						count++
 						break;
 
 					case 'B6':
@@ -1322,7 +1286,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'B7':
@@ -1352,7 +1315,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'B8':
@@ -1382,7 +1344,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'B9':
@@ -1412,8 +1373,8 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
+						
 					case 'U1':
 
 						var match1 = $(document.getElementById("L9"));
@@ -1441,7 +1402,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'U2':
@@ -1471,7 +1431,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'U3':
@@ -1501,7 +1460,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'U4':
@@ -1531,7 +1489,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'U5':
@@ -1561,7 +1518,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'U6':
@@ -1591,7 +1547,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'U7':
@@ -1621,7 +1576,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'U8':
@@ -1651,7 +1605,6 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
 
 					case 'U9':
@@ -1681,19 +1634,13 @@ $(function ()
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)');
 						mTiles.splice(0, 1);
 						count++;
-
 						break;
-
 				}
-
-
 			}
-
 			child.css('border', '6px outset white'); //resets tile border
 			scoreMath(count); //run score function
 			replaceTiles(); // run replace tile function
 		}
-
 
 //STEP FOUR: SCORE
 
@@ -1707,10 +1654,8 @@ $(function ()
 
 		function replaceTiles()
 		{
-
 			$('.face').children().each(function () //for each tile on each face
 			{ 
-
 				var child = $(this);
 				var childColour = child.css('background-color'); //get background colour
 				var colours = 3; // number of possible colours add more options to array if increased.
@@ -1739,7 +1684,7 @@ $(function ()
 			$('.ui-dialog').dialog('close'); //closes game dialog
 		}
 		
-//step Extra: close game (added during scripting in response to bug)
+//step Extra: close game (added during testing in response to bug)
 
 		$('#closeDialog').bind('tap', function () //on exit button click
 		{ 

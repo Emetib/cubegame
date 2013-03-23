@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>jQuery Mobile Web App</title>
+<title>Nicks 3D Cube Game For Android</title>
 
 <link href="jquery.mobile-1.2.0.min.css" rel="stylesheet" type="text/css" />
 <link href="cubecss.css" rel="stylesheet" type="text/css" />
@@ -18,15 +18,46 @@
 
 <div data-role="page" id="page">
 	<div data-role="header">
-		<h1>Nicks 3D Cube Game</h1>
+		<h1>3D Cube Game</h1>
 	</div>
 	<div data-role="content">	
 		<ul data-role="listview">
+			<li><a href="#page1" id="howToPlay" data-rel="dialog" data-transition="slidedown" >How To Play</a></li>
 			<li><a href="#page2" id="startGame" data-rel="dialog" data-transition="slidedown" >The Game</a></li>
-		</ul>		
+		</ul>
+		<p>Later game development will introduce Facebook connectivity and weekly variations to the gameplay and a scoreboard</p>
+		<div id="fbScore">
+		<div id="fb1"><img src="../part%202%20-%20game/images/fb/1.jpg" id="fbi1" /><p>Nick Barker<br />39,000,000</p></div>
+		<div id="fb1"><img src="../part%202%20-%20game/images/fb/2.jpg" id="fbi2" /><p>Friend 2<br />2,900,000</p></div>
+		<div id="fb1"><img src="../part%202%20-%20game/images/fb/3.jpg" id="fbi3" /><p>Friend 3<br />111,000</p></div>
+		<div id="fb1"><img src="../part%202%20-%20game/images/fb/4.jpg" id="fbi4" /><p>Friend 4<br />50001</p></div>
+		<div id="fb1"><img src="../part%202%20-%20game/images/fb/5.jpg" id="fbi5" /><p>Friend 4<br />5000</p></div>
+		<div id="fb1"><img src="../part%202%20-%20game/images/fb/6.jpg" id="fbi6" /><p>Friend 4<br />123</p></div>
+		</div>
 	</div>
 	<div data-role="footer">
-		<h4></h4>
+		<h4>By Nicholas Barker</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>How To Play</h1>
+	</div>
+	<div data-role="content">	
+			<h4>How To Play:</h4>
+			<p>The aim of the game is to score as many points in 1 minute (60 seconds) as possible.
+			The game consists of a cube, of which one surface is visable, the surface contains 9 tiles.
+			The cube can be turned by swiping a finger across the screen.
+			This is achieved by tapping any tile on the visible surface of a cube. When a tile is tapped, 
+			all other squares on any surface of the cube that are connected by a flat side. Your score for
+			each tap is the number of tiles cleared squared.<br />
+			Good Luck.
+			</p>
+	</div>
+	<div data-role="footer">
+		<h4>
+	<input type="button" value="Quit Game" id="closeInstructionDialog" /></p>
 	</div>
 </div>
 

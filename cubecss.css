@@ -1,7 +1,37 @@
 @charset "utf-8";
 /* CSS Document */
+/* The Menu */
+#fbScore {
+	border-top: 20px solid #3B5998; 
+	border-left: 4px solid #3B5998;
+	border-right: 4px solid #3B5998;
+	border-bottom: 4px solid #3B5998;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	}
+	
+#fbScore div {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	border: 2px dashed #3B5998;
+}
 
-/*The Cube */
+#fbScore div img {
+	display: inline-block;
+	height: 45px;
+	width: 45px;
+	border: 1px dashed #3B5998;
+}
+
+#fbScore div p {
+	font-size: 90%;
+	text-align: right;
+	bottom: 0px;
+	right: 0px;
+}
+
+/* The Cube */
 
  #experiment {
       -webkit-perspective: 800;
@@ -51,9 +81,8 @@
     #cube .six {
       -webkit-transform: rotateX(-90deg) translateZ(100px);
     }
+	
 
 /*JQUERY OVERRIDES*/
-
-.ui-dialog.cubeDialog .ui-dialog-contain { margin-top: 5%;}
 
 .ui-dialog  .ui-header .ui-btn-icon-notext	{ display:none;}
