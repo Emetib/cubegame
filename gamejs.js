@@ -3,6 +3,8 @@
 
 $(function () //document.ready function shorthand
 {
+
+			
 	$('#closeInstructionDialog').bind('tap', function () //on exit button click
 	{ 
 		$('.ui-dialog').dialog('close'); //closes instruction dialog
@@ -96,10 +98,10 @@ $(function () //document.ready function shorthand
 						$(mTiles[0]).css('background-color', 'rgba(0, 0, 0, 0)'); // remove checked tile colour
 						mTiles.splice(0, 1); //remove checked tile from array
 						count++; //add one to tile count
-						break; //exit switch, restart from while loop.
+						break; //exit switch, restart while loop.
 
 					case 'F2':
-						//all cases same, skip to line ~1700.
+						//all cases same, skip to line ~1640.
 						var match1 = $(document.getElementById("F1"));
 						var match2 = $(document.getElementById("F3"));
 						var match3 = $(document.getElementById("T8"));
@@ -1646,8 +1648,11 @@ $(function () //document.ready function shorthand
 
 		function scoreMath(count)
 		{
+			if (count > 1)
+			{
 			score = score + (count * count); //calculates new score
 			$("#score").text(score); //displays new score
+			}
 		}
 		
 //STEP FIVE: REPLACE TILES

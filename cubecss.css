@@ -1,24 +1,31 @@
 @charset "utf-8";
 /* CSS Document */
 /* The Menu */
+
+#menu {
+overflow-x:hidden;
+}
 #fbScore {
+	position: relative;
+	left: -400px;
+	width: 800px;
+	height: 110px;
 	border-top: 20px solid #3B5998; 
 	border-left: 4px solid #3B5998;
 	border-right: 4px solid #3B5998;
 	border-bottom: 4px solid #3B5998;
-	overflow-x: scroll;
 	overflow-y: hidden;
 	}
 	
 #fbScore div {
 	display: inline-block;
+	vertical-align:top;
 	height: 100px;
 	width: 100px;
 	border: 2px dashed #3B5998;
 }
 
 #fbScore div img {
-	display: inline-block;
 	height: 45px;
 	width: 45px;
 	border: 1px dashed #3B5998;
